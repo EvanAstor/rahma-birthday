@@ -5,10 +5,8 @@
 
     <meta
         name="viewport"
-        content="width=device-width,
-                 initial-scale=1.0,
-                 maximum-scale=1.0,
-                 user-scalable=no"
+        content="width=device-width, initial-scale=1.0,
+                 maximum-scale=1.0, user-scalable=no"
     >
 
     <meta name="theme-color" content="#05060d">
@@ -20,20 +18,11 @@
 
 <body>
 
-    <!-- =========================
-         BACKGROUND
-    ========================== -->
-
     <canvas id="starCanvas"></canvas>
 
     <div class="ambient-glow"></div>
 
     <div id="touchLayer"></div>
-
-
-    <!-- =========================
-         OPENING
-    ========================== -->
 
     <main id="opening" class="scene">
 
@@ -53,23 +42,10 @@
                 Take your time...
             </p>
 
-
-            <!--
-                The star is the actual
-                entrance button.
-            -->
-
-            <button
-                id="beginBtn"
-                aria-label="Begin"
-            >
-
+            <button id="beginBtn" aria-label="Begin">
                 <span class="begin-star">✦</span>
-
                 <span class="begin-ring"></span>
-
             </button>
-
 
             <div class="tap-hint">
                 tap to enter
@@ -77,17 +53,9 @@
 
         </div>
 
-
-        <!-- Hidden atmospheric detail -->
-
-        <div
-            id="secretStar"
-            class="secret-star"
-            aria-hidden="true"
-        >
+        <div id="secretStar" class="secret-star">
             ✦
         </div>
-
 
         <div class="corner-mark">
             <span>✦</span>
@@ -96,43 +64,197 @@
     </main>
 
 
-    <!-- =========================
-         GARDEN
-         TEMPORARY FOR NOW
-    ========================== -->
+    <main id="garden" class="scene hidden">
 
-    <main
-        id="garden"
-        class="scene hidden"
-    >
+        <div class="garden-sky"></div>
 
-        <div class="garden-content">
+        <div class="moon">
+            <div class="moon-glow"></div>
+        </div>
 
-            <div class="eyebrow">
+        <div class="garden-mist mist-one"></div>
+        <div class="garden-mist mist-two"></div>
+
+        <div class="garden-header">
+
+            <div class="chapter-label">
                 CHAPTER I
             </div>
 
             <h2>
-                The Garden
+                The Hidden Garden
             </h2>
 
-            <p>
-                Something is waiting for you here...
+            <p class="garden-subtitle">
+                Something here is waiting to be found.
             </p>
+
+        </div>
+
+
+        <div class="garden-world">
+
+            <div class="distant-tree tree-one"></div>
+            <div class="distant-tree tree-two"></div>
+            <div class="distant-tree tree-three"></div>
+
+            <div class="firefly firefly-1"></div>
+            <div class="firefly firefly-2"></div>
+            <div class="firefly firefly-3"></div>
+            <div class="firefly firefly-4"></div>
+            <div class="firefly firefly-5"></div>
+            <div class="firefly firefly-6"></div>
+
+            <div class="grass grass-one"></div>
+            <div class="grass grass-two"></div>
+            <div class="grass grass-three"></div>
+
+            <div
+                class="flower flower-1"
+                data-message="It started with something small..."
+            >
+                <div class="flower-glow"></div>
+                <div class="flower-head">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="flower-center"></div>
+                <div class="stem"></div>
+                <div class="leaf leaf-left"></div>
+            </div>
+
+
+            <div
+                class="flower flower-2"
+                data-message="...something I didn't expect..."
+            >
+                <div class="flower-glow"></div>
+                <div class="flower-head">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="flower-center"></div>
+                <div class="stem"></div>
+                <div class="leaf leaf-right"></div>
+            </div>
+
+
+            <div
+                class="flower flower-3"
+                data-message="...to become something..."
+            >
+                <div class="flower-glow"></div>
+                <div class="flower-head">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="flower-center"></div>
+                <div class="stem"></div>
+                <div class="leaf leaf-left"></div>
+            </div>
+
+
+            <div
+                class="flower flower-4"
+                data-message="...I wouldn't want..."
+            >
+                <div class="flower-glow"></div>
+                <div class="flower-head">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="flower-center"></div>
+                <div class="stem"></div>
+                <div class="leaf leaf-right"></div>
+            </div>
+
+
+            <div
+                class="flower flower-5"
+                data-message="...to ever lose."
+            >
+                <div class="flower-glow"></div>
+                <div class="flower-head">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="flower-center"></div>
+                <div class="stem"></div>
+                <div class="leaf leaf-left"></div>
+            </div>
+
+            <div class="ground"></div>
+
+        </div>
+
+
+        <div class="garden-progress">
+            <span id="flowersFound">0</span>
+            <span class="progress-divider">/</span>
+            <span>5</span>
+        </div>
+
+
+        <div id="flowerMessage" class="flower-message">
+
+            <div class="message-sparkle">
+                ✦
+            </div>
+
+            <p id="messageText"></p>
+
+        </div>
+
+
+        <div id="gardenComplete" class="garden-complete">
+
+            <div class="complete-flower">
+                ✦
+            </div>
+
+            <p class="complete-small">
+                You found them all.
+            </p>
+
+            <h3>
+                Maybe this wasn't just a garden.
+            </h3>
+
+            <p class="complete-sub">
+                There are still a few things left to discover.
+            </p>
+
+            <button id="gardenContinue" class="continue-btn">
+                Continue
+                <span>→</span>
+            </button>
 
         </div>
 
     </main>
 
 
-    <!-- =========================
-         TRANSITION
-    ========================== -->
-
-    <div
-        id="transition"
-        class="transition-screen"
-    >
+    <div id="transition" class="transition-screen">
 
         <div class="transition-star">
             ✦
