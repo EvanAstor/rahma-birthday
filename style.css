@@ -2217,3 +2217,47 @@ button {
     .scope-aim-note { top:16%; font-size:.5rem; }
     .scope-discovery { bottom:15%; max-width:82vw; text-align:center; }
 }
+/* =========================================
+   RAHMA PERSONAL TOUCH
+========================================= */
+
+.name-highlight {
+    display: inline-block;
+    background: linear-gradient(
+        120deg,
+        #ffffff 0%,
+        #f7d9ea 45%,
+        #ffffff 75%,
+        #dcd9ff 100%
+    );
+    background-size: 220% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rahmaShimmer 5s ease-in-out infinite;
+    text-shadow: none;
+}
+
+@keyframes rahmaShimmer {
+    0% {
+        background-position: 0% center;
+    }
+
+    50% {
+        background-position: 100% center;
+    }
+
+    100% {
+        background-position: 0% center;
+    }
+}
+
+.opening-content .eyebrow {
+    letter-spacing: 4.5px;
+}
+
+@media (max-width: 600px) {
+    .name-highlight {
+        letter-spacing: -1px;
+    }
+}

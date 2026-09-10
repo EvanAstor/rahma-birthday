@@ -298,10 +298,11 @@ secretStar.addEventListener("pointerdown", event => {
 
 const introMessages = [
     "Take your time...",
-    "There's no rush.",
-    "Just follow the little stars.",
-    "Something is waiting for you.",
-    "And yes... you have to discover it."
+    "This little world is just for you.",
+    "There are a few things I wanted you to discover.",
+    "Follow the little stars.",
+    "And eventually... you'll find the reason I made this.",
+    "Happy birthday, Rahma. ❤️"
 ];
 
 function changeIntroText() {
