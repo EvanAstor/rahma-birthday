@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width,
+                 initial-scale=1.0,
+                 maximum-scale=1.0,
+                 user-scalable=no"
+    >
+
+    <meta name="theme-color" content="#05060d">
+
+    <title>A Little Something</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         BACKGROUND
+    ========================== -->
+
+    <canvas id="starCanvas"></canvas>
+
+    <div class="ambient-glow"></div>
+
+    <div id="touchLayer"></div>
+
+
+    <!-- =========================
+         OPENING
+    ========================== -->
+
+    <main id="opening" class="scene">
+
+        <div class="opening-content">
+
+            <div class="eyebrow">
+                A LITTLE SOMETHING
+            </div>
+
+            <h1 id="mainTitle">
+                I made a little
+                <br>
+                something for you.
+            </h1>
+
+            <p id="introText">
+                Take your time...
+            </p>
+
+
+            <!--
+                The star is the actual
+                entrance button.
+            -->
+
+            <button
+                id="beginBtn"
+                aria-label="Begin"
+            >
+
+                <span class="begin-star">✦</span>
+
+                <span class="begin-ring"></span>
+
+            </button>
+
+
+            <div class="tap-hint">
+                tap to enter
+            </div>
+
+        </div>
+
+
+        <!-- Hidden atmospheric detail -->
+
+        <div
+            id="secretStar"
+            class="secret-star"
+            aria-hidden="true"
+        >
+            ✦
+        </div>
+
+
+        <div class="corner-mark">
+            <span>✦</span>
+        </div>
+
+    </main>
+
+
+    <!-- =========================
+         GARDEN
+         TEMPORARY FOR NOW
+    ========================== -->
+
+    <main
+        id="garden"
+        class="scene hidden"
+    >
+
+        <div class="garden-content">
+
+            <div class="eyebrow">
+                CHAPTER I
+            </div>
+
+            <h2>
+                The Garden
+            </h2>
+
+            <p>
+                Something is waiting for you here...
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================
+         TRANSITION
+    ========================== -->
+
+    <div
+        id="transition"
+        class="transition-screen"
+    >
+
+        <div class="transition-star">
+            ✦
+        </div>
+
+    </div>
+
+
+    <script src="app.js"></script>
+
+</body>
+</html>
