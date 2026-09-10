@@ -21,10 +21,12 @@
                 something for you.
             </h1>
             <p id="introText">Take your time...</p>
+
             <button id="beginBtn" aria-label="Begin">
                 <span class="begin-star">✦</span>
                 <span class="begin-ring"></span>
             </button>
+
             <div class="tap-hint">tap to enter</div>
         </div>
 
@@ -145,6 +147,7 @@
             <p class="complete-sub">
                 There are still a few things left to discover.
             </p>
+
             <button id="gardenContinue" class="continue-btn">
                 Continue
                 <span>→</span>
@@ -155,6 +158,7 @@
     <main id="sky" class="scene hidden">
         <div class="sky-haze"></div>
         <div class="sky-glow"></div>
+
         <button id="skyMoon" class="sky-moon" aria-label="The moon"></button>
 
         <div class="sky-header">
@@ -175,36 +179,41 @@
 
             <div id="gardenEcho" class="garden-echo">✦</div>
 
-           <button class="sky-star sky-star-1"
-    data-message="The little things you do..."
-    aria-label="Star"></button>
+            <button class="sky-star sky-star-1"
+                data-message="The little things you do..."
+                aria-label="Star"></button>
 
-<button class="sky-star sky-star-2"
-    data-message="The way you make me smile without even trying..."
-    aria-label="Star"></button>
+            <button class="sky-star sky-star-2"
+                data-message="The way you make me smile without even trying..."
+                aria-label="Star"></button>
 
-<button class="sky-star sky-star-3"
-    data-message="The moments I wish I could pause..."
-    aria-label="Star"></button>
+            <button class="sky-star sky-star-3"
+                data-message="The moments I wish I could pause..."
+                aria-label="Star"></button>
 
-<button class="sky-star sky-star-4"
-    data-message="The memories I never want to forget..."
-    aria-label="Star"></button>
+            <button class="sky-star sky-star-4"
+                data-message="The memories I never want to forget..."
+                aria-label="Star"></button>
 
-<button class="sky-star sky-star-5"
-    data-message="The feeling of having you in my life..."
-    aria-label="Star"></button>
+            <button class="sky-star sky-star-5"
+                data-message="The feeling of having you in my life..."
+                aria-label="Star"></button>
 
-<button class="sky-star sky-star-6"
-    data-message="And one person behind all of it..."
-    aria-label="Star"></button>
+            <button class="sky-star sky-star-6"
+                data-message="And one person behind all of it..."
+                aria-label="Star"></button>
 
-<button id="hiddenSkyStar"
-    class="sky-star sky-star-hidden"
-    data-message="Rahma. ❤️"
-    aria-label="Hidden star"></button>
-    
-            <button id="skySecret" class="sky-secret" aria-label="Golden star" aria-hidden="true"><span>✦</span></button>
+            <button id="hiddenSkyStar"
+                class="sky-star sky-star-hidden"
+                data-message="Rahma. ❤️"
+                aria-label="Hidden star"></button>
+
+            <button id="skySecret"
+                class="sky-secret"
+                aria-label="Golden star"
+                aria-hidden="true">
+                <span>✦</span>
+            </button>
 
             <div class="sky-dust dust-1"></div>
             <div class="sky-dust dust-2"></div>
@@ -239,6 +248,7 @@
             <p class="complete-sub">
                 And sometimes, the smallest lights lead you somewhere beautiful.
             </p>
+
             <button id="skyContinue" class="continue-btn">
                 Continue
                 <span>→</span>
@@ -246,13 +256,16 @@
         </div>
     </main>
 
-
     <main id="observatory" class="scene hidden">
         <div class="observatory-sky"></div>
         <div class="observatory-glow"></div>
+
         <div class="observatory-starscape" aria-hidden="true">
-            <span class="obs-dust d1"></span><span class="obs-dust d2"></span><span class="obs-dust d3"></span>
-            <span class="obs-dust d4"></span><span class="obs-dust d5"></span>
+            <span class="obs-dust d1"></span>
+            <span class="obs-dust d2"></span>
+            <span class="obs-dust d3"></span>
+            <span class="obs-dust d4"></span>
+            <span class="obs-dust d5"></span>
         </div>
 
         <div class="observatory-header">
@@ -274,7 +287,12 @@
                 <div class="window-glass"></div>
             </div>
 
-            <div class="telescope" id="telescope" role="button" tabindex="0" aria-label="Look through the telescope">
+            <div class="telescope"
+                id="telescope"
+                role="button"
+                tabindex="0"
+                aria-label="Look through the telescope">
+
                 <div class="scope-body"></div>
                 <div class="scope-lens"></div>
                 <div class="scope-mount"></div>
@@ -284,41 +302,108 @@
 
             <div class="observatory-beam" id="observatoryBeam"></div>
 
-            <div class="telescope-view" id="telescopeView" aria-hidden="true">
+            <div class="telescope-view"
+                id="telescopeView"
+                aria-hidden="true">
+
                 <div class="scope-vignette"></div>
+
                 <div class="scope-stars" id="scopeStars">
-                    <button class="scope-target scope-target-1" data-star="0" aria-label="Hidden light one"><span>✦</span></button>
-                    <button class="scope-target scope-target-2" data-star="1" aria-label="Hidden light two"><span>✦</span></button>
-                    <button class="scope-target scope-target-3" data-star="2" aria-label="Hidden light three"><span>✦</span></button>
+                    <button class="scope-target scope-target-1"
+                        data-star="0"
+                        aria-label="Hidden light one">
+                        <span>✦</span>
+                    </button>
+
+                    <button class="scope-target scope-target-2"
+                        data-star="1"
+                        aria-label="Hidden light two">
+                        <span>✦</span>
+                    </button>
+
+                    <button class="scope-target scope-target-3"
+                        data-star="2"
+                        aria-label="Hidden light three">
+                        <span>✦</span>
+                    </button>
                 </div>
+
                 <div class="scope-nebula nebula-one"></div>
                 <div class="scope-nebula nebula-two"></div>
                 <div class="scope-shooting-star"></div>
                 <div class="scope-reticle"></div>
-                <div class="scope-aim-note">drag to search the sky</div>
+
+                <div class="scope-aim-note">
+                    drag to search the sky
+                </div>
+
                 <div class="scope-found-note" id="scopeFoundNote"></div>
-                <div class="scope-caption">LOOKING THROUGH THE TELESCOPE</div>
-                <button class="scope-close" id="scopeClose" type="button" aria-label="Close telescope view">×</button>
-                <div class="scope-discovery" id="scopeDiscovery">Find the lights hidden in the sky.</div>
+
+                <div class="scope-caption">
+                    LOOKING THROUGH THE TELESCOPE
+                </div>
+
+                <button class="scope-close"
+                    id="scopeClose"
+                    type="button"
+                    aria-label="Close telescope view">
+                    ×
+                </button>
+
+                <div class="scope-discovery" id="scopeDiscovery">
+                    Find the lights hidden in the sky.
+                </div>
             </div>
 
-            <svg class="heart-constellation" id="heartConstellation" viewBox="0 0 500 360" aria-hidden="true">
-                <path class="heart-line h1" d="M250 305 L135 205 L90 135"/>
-                <path class="heart-line h2" d="M90 135 L105 85 L150 55 L205 60 L250 105"/>
-                <path class="heart-line h3" d="M250 105 L295 60 L350 55 L395 85 L410 135"/>
-                <path class="heart-line h4" d="M410 135 L365 205 L250 305"/>
-                <path class="heart-line h5" d="M135 205 L250 105 L365 205"/>
+            <svg class="heart-constellation"
+                id="heartConstellation"
+                viewBox="0 0 500 360"
+                aria-hidden="true">
+
+                <path class="heart-line h1"
+                    d="M250 305 L135 205 L90 135"/>
+
+                <path class="heart-line h2"
+                    d="M90 135 L105 85 L150 55 L205 60 L250 105"/>
+
+                <path class="heart-line h3"
+                    d="M250 105 L295 60 L350 55 L395 85 L410 135"/>
+
+                <path class="heart-line h4"
+                    d="M410 135 L365 205 L250 305"/>
+
+                <path class="heart-line h5"
+                    d="M135 205 L250 105 L365 205"/>
+
                 <g class="heart-points">
-                    <circle cx="90" cy="135" r="4"/><circle cx="150" cy="55" r="4"/>
-                    <circle cx="250" cy="105" r="4.5"/><circle cx="350" cy="55" r="4"/>
-                    <circle cx="410" cy="135" r="4"/><circle cx="365" cy="205" r="4"/>
-                    <circle cx="250" cy="305" r="4.5"/><circle cx="135" cy="205" r="4"/>
+                    <circle cx="90" cy="135" r="4"/>
+                    <circle cx="150" cy="55" r="4"/>
+                    <circle cx="250" cy="105" r="4.5"/>
+                    <circle cx="350" cy="55" r="4"/>
+                    <circle cx="410" cy="135" r="4"/>
+                    <circle cx="365" cy="205" r="4"/>
+                    <circle cx="250" cy="305" r="4.5"/>
+                    <circle cx="135" cy="205" r="4"/>
                 </g>
             </svg>
 
-            <button class="observatory-star obs-star-1" data-title="The beginning" data-clue="Somewhere along the way, you stopped being just another person in my life... and became someone I never wanted to lose." aria-label="First memory"></button>
-            <button class="observatory-star obs-star-2" data-title="The little things" data-clue="It is the tiny things I remember most: the laughs, the looks, the random moments that somehow became my favorite ones." aria-label="Second memory"></button>
-            <button class="observatory-star obs-star-3" data-title="The reason" data-clue="If I had to choose one thing I want you to remember, it would be this: having you in my life made ordinary days feel special." aria-label="Third memory"></button>
+            <button class="observatory-star obs-star-1"
+                data-title="The beginning"
+                data-clue="Somewhere along the way, you stopped being just another person in my life... and became someone I never wanted to lose."
+                aria-label="First memory">
+            </button>
+
+            <button class="observatory-star obs-star-2"
+                data-title="The little things"
+                data-clue="It is the tiny things I remember most: the laughs, the looks, the random moments that somehow became my favorite ones."
+                aria-label="Second memory">
+            </button>
+
+            <button class="observatory-star obs-star-3"
+                data-title="The reason"
+                data-clue="If I had to choose one thing I want you to remember, it would be this: having you in my life made ordinary days feel special."
+                aria-label="Third memory">
+            </button>
         </div>
 
         <div class="observatory-progress">
@@ -333,18 +418,27 @@
 
         <div id="observatoryMessage" class="observatory-message">
             <div class="observatory-message-sparkle">✦</div>
-            <div class="memory-label" id="memoryLabel">A little memory</div>
+            <div class="memory-label" id="memoryLabel">
+                A little memory
+            </div>
             <p id="observatoryMessageText"></p>
         </div>
 
         <div id="observatoryComplete" class="observatory-complete">
             <div class="observatory-complete-heart">♡</div>
-            <p class="complete-small">THE CONSTELLATION WAS NEVER ABOUT THE STARS.</p>
+
+            <p class="complete-small">
+                THE CONSTELLATION WAS NEVER ABOUT THE STARS.
+            </p>
+
             <h3>It was about you.</h3>
+
             <p class="complete-sub">
-                I wanted your birthday gift to be something you could discover, not just something you could open.
+                I wanted your birthday gift to be something you could discover,
+                not just something you could open.
                 And there is still one thing I want to tell you.
             </p>
+
             <button id="observatoryContinue" class="continue-btn">
                 One last thing
                 <span>→</span>
@@ -353,26 +447,48 @@
 
         <div id="birthdayLetter" class="birthday-letter">
             <div class="letter-card">
+
                 <div class="letter-symbol">✦</div>
-                <div class="complete-small">FOR YOUR BIRTHDAY</div>
+
+                <div class="complete-small">
+                    FOR RAHMA · WITH LOVE
+                </div>
+
                 <h3>A little letter for you</h3>
+
                 <p>
-                    I could have made you something simple. But you are not someone I wanted to give
-                    something simple to.
+                    I could have made you something simple.
+                    But you are not someone I wanted to give something simple to.
                 </p>
+
                 <p>
-                    So I hid little pieces of what I feel inside a garden, scattered them across the sky,
-                    and let the stars lead you here.
+                    So I hid little pieces of what I feel inside a garden,
+                    scattered them across the sky, and let the stars lead you here.
                 </p>
+
                 <p>
-                    I hope every time you look back at this, you remember that somewhere behind all these
-                    little details was one very simple thought: <strong>I wanted to make you smile.</strong>
+                    And somehow, after all those stars,
+                    the thing I kept finding was always you.
                 </p>
-                <p class="letter-final">Happy birthday. ❤️</p>
+
+                <p class="letter-special">
+                    You make ordinary moments feel like memories.
+                </p>
+
+                <p>
+                    I hope this year gives you countless reasons to smile,
+                    and I hope you always remember just how special you are to me.
+                </p>
+
+                <p class="letter-final">
+                    Happy birthday, Rahma. ❤️
+                </p>
+
                 <button id="letterClose" class="continue-btn">
                     Keep going
                     <span>→</span>
                 </button>
+
             </div>
         </div>
     </main>
@@ -380,6 +496,35 @@
     <div id="transition" class="transition-screen">
         <div class="transition-star">✦</div>
     </div>
+
+    <!-- FINAL SECRET -->
+    <section id="finalReveal" class="final-reveal">
+        <div class="final-stars"></div>
+
+        <div class="final-reveal-content">
+
+            <p class="final-line final-line-1">
+                If you ever forget how special you are...
+            </p>
+
+            <p class="final-line final-line-2">
+                Look up.
+            </p>
+
+            <div class="final-heart">
+                ♡
+            </div>
+
+            <h2 class="final-name">
+                Rahma.
+            </h2>
+
+            <p class="final-birthday">
+                Happy Birthday. ❤️
+            </p>
+
+        </div>
+    </section>
 
     <script src="app.js"></script>
 </body>

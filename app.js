@@ -992,14 +992,18 @@ observatoryContinue.addEventListener("click", () => {
     setTimeout(() => birthdayLetter.classList.add("show"), 450);
 });
 
+const finalReveal = document.getElementById("finalReveal");
+
 letterClose.addEventListener("click", () => {
+
     birthdayLetter.classList.remove("show");
+
     setTimeout(() => {
-        showObservatoryMessage(
-            "Chapter III",
-            "Keep this little place. There are still more things I want to give you."
-        );
-    }, 700);
+
+        finalReveal.classList.add("active");
+
+    }, 900);
+
 });
 
 window.addEventListener("resize", () => {

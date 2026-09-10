@@ -2261,3 +2261,250 @@ button {
         letter-spacing: -1px;
     }
 }
+/* =========================================
+   STAGE 2 — FINAL REVEAL
+========================================= */
+
+.final-reveal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(116, 91, 160, 0.16),
+            transparent 42%
+        ),
+        #05050d;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+        opacity 1.8s ease,
+        visibility 1.8s ease;
+}
+
+.final-reveal.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.final-stars {
+    position: absolute;
+    inset: -10%;
+
+    background-image:
+        radial-gradient(circle, rgba(255,255,255,.8) 1px, transparent 1.5px),
+        radial-gradient(circle, rgba(255,255,255,.5) 1px, transparent 1.5px),
+        radial-gradient(circle, rgba(255,255,255,.35) 1px, transparent 1.5px);
+
+    background-size:
+        170px 170px,
+        230px 230px,
+        310px 310px;
+
+    background-position:
+        20px 40px,
+        100px 120px,
+        40px 200px;
+
+    opacity: .45;
+
+    animation: finalStarsMove 25s linear infinite;
+}
+
+@keyframes finalStarsMove {
+    from {
+        transform: scale(1) translate3d(0, 0, 0);
+    }
+
+    to {
+        transform: scale(1.08) translate3d(-20px, -15px, 0);
+    }
+}
+
+.final-reveal-content {
+    position: relative;
+    z-index: 2;
+
+    width: min(90%, 700px);
+
+    text-align: center;
+}
+
+.final-line {
+    margin: 0;
+
+    color: rgba(255,255,255,.72);
+
+    font-size: clamp(16px, 2vw, 21px);
+    letter-spacing: 1px;
+
+    opacity: 0;
+}
+
+.final-line-1 {
+    transform: translateY(15px);
+}
+
+.final-line-2 {
+    margin-top: 22px;
+
+    font-size: clamp(28px, 5vw, 52px);
+    color: white;
+
+    letter-spacing: 5px;
+    font-weight: 500;
+
+    transform: translateY(15px);
+}
+
+.final-heart {
+    margin: 34px auto 18px;
+
+    font-size: clamp(60px, 9vw, 100px);
+    line-height: 1;
+
+    color: rgba(255,255,255,.92);
+
+    opacity: 0;
+    transform: scale(.6);
+
+    text-shadow:
+        0 0 18px rgba(255,255,255,.25),
+        0 0 45px rgba(190,150,255,.2);
+}
+
+.final-name {
+    margin: 0;
+
+    font-size: clamp(38px, 7vw, 72px);
+    font-weight: 400;
+
+    letter-spacing: 6px;
+
+    background: linear-gradient(
+        120deg,
+        #ffffff,
+        #f1d8ea,
+        #dcd9ff,
+        #ffffff
+    );
+
+    background-size: 250% auto;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+
+    opacity: 0;
+    transform: translateY(15px);
+}
+
+.final-birthday {
+    margin-top: 22px;
+
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    color: rgba(255,255,255,.55);
+
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+/* Reveal sequence */
+
+.final-reveal.active .final-line-1 {
+    animation: finalFadeUp 1.5s ease forwards .8s;
+}
+
+.final-reveal.active .final-line-2 {
+    animation: finalFadeUp 1.5s ease forwards 2.4s;
+}
+
+.final-reveal.active .final-heart {
+    animation:
+        finalHeartAppear 1.4s ease forwards 4s,
+        finalHeartPulse 3s ease-in-out infinite 5.4s;
+}
+
+.final-reveal.active .final-name {
+    animation:
+        finalFadeUp 1.5s ease forwards 5.2s,
+        finalNameShimmer 6s ease-in-out infinite 5.2s;
+}
+
+.final-reveal.active .final-birthday {
+    animation: finalFadeUp 1.5s ease forwards 6.5s;
+}
+
+@keyframes finalFadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes finalHeartAppear {
+    0% {
+        opacity: 0;
+        transform: scale(.5);
+    }
+
+    60% {
+        opacity: 1;
+        transform: scale(1.12);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes finalHeartPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+}
+
+@keyframes finalNameShimmer {
+    0% {
+        background-position: 0% center;
+    }
+
+    50% {
+        background-position: 100% center;
+    }
+
+    100% {
+        background-position: 0% center;
+    }
+}
+
+@media (max-width: 600px) {
+    .final-line-2 {
+        letter-spacing: 3px;
+    }
+
+    .final-name {
+        letter-spacing: 4px;
+    }
+}
