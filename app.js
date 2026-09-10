@@ -856,6 +856,7 @@ function closeTelescopeView() {
 function useTelescope() {
     if (!telescopeUsed) {
         telescopeUsed = true;
+                observatory.classList.add("telescope-active");
         telescope.classList.add("used");
         observatoryHint.classList.remove("show");
         observatoryBeam.classList.add("active");
