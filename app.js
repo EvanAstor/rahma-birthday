@@ -851,6 +851,9 @@ function closeTelescopeView() {
     telescopeView.setAttribute("aria-hidden", "true");
     telescopeView.classList.remove("dragging");
     scopeDragging = false;
+
+        observatory.classList.remove("telescope-active");
+
 }
 
 function useTelescope() {
