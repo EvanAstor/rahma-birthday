@@ -948,21 +948,30 @@ scopeTargets.forEach((target) => {
         createMemoryBurst(target);
 
         if (foundObservatoryStars === 3) {
-            setTimeout(() => {
-                closeTelescopeView();
-                resetScopePan();
-                activateHeartConstellation();
-                showObservatoryMessage(
-                    "And this is the part I mean most",
-                    "Out of all the places these stars could have led to... they led back to you."
-                );
-            }, 1400);
 
-            setTimeout(() => {
-                observatoryComplete.classList.add("show");
-                observatoryFinished = true;
-            }, 5000);
-        }
+    // Close the telescope first.
+    // Give the player a moment to see the empty observatory again.
+    setTimeout(() => {
+        closeTelescopeView();
+        resetScopePan();
+        activateHeartConstellation();
+    }, 900);
+
+    // Let the heart constellation fully appear before showing any message.
+    setTimeout(() => {
+        showObservatoryMessage(
+            "And this is the part I mean most",
+            "Out of all the places these stars could have led to... they led back to you."
+        );
+    }, 3000);
+
+    // Only after the heart + message have had time to breathe,
+    // reveal the final observatory card.
+    setTimeout(() => {
+        observatoryComplete.classList.add("show");
+        observatoryFinished = true;
+    }, 6500);
+}
     });
 });
 

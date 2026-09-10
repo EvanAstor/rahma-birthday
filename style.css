@@ -2508,3 +2508,257 @@ button {
         letter-spacing: 4px;
     }
 }
+/* =========================================
+   STAGE 3 — CINEMATIC POLISH
+========================================= */
+
+.final-reveal::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 50% 50%,
+            transparent 0%,
+            rgba(5, 5, 13, 0.18) 55%,
+            rgba(5, 5, 13, 0.65) 100%
+        );
+
+    pointer-events: none;
+}
+
+.final-reveal-content {
+    animation: finalContentBreath 8s ease-in-out infinite;
+}
+
+@keyframes finalContentBreath {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.final-reveal.active .final-stars {
+    animation:
+        finalStarsMove 25s linear infinite,
+        finalStarsGlow 5s ease-in-out infinite;
+}
+
+@keyframes finalStarsGlow {
+    0%, 100% {
+        opacity: .35;
+    }
+
+    50% {
+        opacity: .6;
+    }
+}
+
+.final-reveal.active .final-heart {
+    filter: drop-shadow(0 0 12px rgba(255,255,255,.2));
+}
+
+.final-reveal.active .final-name {
+    text-shadow:
+        0 0 25px rgba(220, 210, 255, .08);
+}
+
+@media (max-width: 600px) {
+    .final-reveal-content {
+        width: min(92%, 500px);
+    }
+
+    .final-line {
+        padding: 0 10px;
+    }
+}
+/* =========================================
+   EMERGENCY FIX — HEART CONSTELLATION LINES
+========================================= */
+
+#heartConstellation {
+    display: block !important;
+    overflow: visible !important;
+}
+
+/* FORCE THE HEART LINES TO EXIST */
+#heartConstellation .heart-line {
+    display: block !important;
+
+    fill: none !important;
+    stroke: #ffffff !important;
+    stroke-width: 2px !important;
+
+    stroke-linecap: round !important;
+    stroke-linejoin: round !important;
+
+    visibility: visible !important;
+
+    opacity: 1 !important;
+
+    vector-effect: non-scaling-stroke !important;
+}
+
+/* FORCE THE STARS */
+#heartConstellation .heart-points {
+    display: block !important;
+}
+
+#heartConstellation .heart-points circle {
+    display: block !important;
+
+    fill: #ffffff !important;
+    stroke: none !important;
+
+    opacity: 1 !important;
+}
+
+/* Glow */
+#heartConstellation .heart-line {
+    filter:
+        drop-shadow(0 0 3px rgba(255,255,255,.8))
+        drop-shadow(0 0 8px rgba(200,180,255,.35));
+}
+/* =========================================
+   STAGE 4 — CINEMATIC FINAL REVEAL
+========================================= */
+
+/* Dark cinematic entrance */
+#finalReveal {
+    background:
+        radial-gradient(
+            circle at 50% 42%,
+            rgba(150, 120, 190, 0.14),
+            transparent 38%
+        ),
+        radial-gradient(
+            circle at 50% 70%,
+            rgba(255,255,255,0.035),
+            transparent 45%
+        ),
+        #05050d !important;
+}
+
+/* Slowly breathing atmosphere */
+#finalReveal::before {
+    content: "";
+    position: absolute;
+    inset: -20%;
+
+    background:
+        radial-gradient(
+            circle at 50% 50%,
+            rgba(255,255,255,.045),
+            transparent 32%
+        );
+
+    opacity: 0;
+
+    transition: opacity 2s ease;
+    animation: finalAtmosphere 8s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes finalAtmosphere {
+    0%, 100% {
+        transform: scale(.95);
+        opacity: .25;
+    }
+
+    50% {
+        transform: scale(1.08);
+        opacity: .65;
+    }
+}
+
+/* Make the whole composition breathe very slightly */
+#finalReveal.active .final-reveal-content {
+    animation: finalComposition 9s ease-in-out infinite;
+}
+
+@keyframes finalComposition {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Stronger "Look up." */
+#finalReveal.active .final-line-1 {
+    animation:
+        finalFadeUp 1.5s ease forwards .8s;
+}
+
+#finalReveal.active .final-line-2 {
+    animation:
+        finalFadeUp 1.5s ease forwards 2.4s,
+        finalLookUpGlow 4s ease-in-out infinite 4s;
+}
+
+@keyframes finalLookUpGlow {
+    0%, 100% {
+        text-shadow: 0 0 0 rgba(255,255,255,0);
+    }
+
+    50% {
+        text-shadow:
+            0 0 18px rgba(255,255,255,.16),
+            0 0 40px rgba(190,160,255,.08);
+    }
+}
+
+/* Heart becomes the visual center */
+#finalReveal.active .final-heart {
+    animation:
+        finalHeartAppear 1.4s ease forwards 4s,
+        finalHeartPulse 4s ease-in-out infinite 5.4s;
+}
+
+/* Softer heart glow */
+#finalReveal .final-heart {
+    text-shadow:
+        0 0 18px rgba(255,255,255,.22),
+        0 0 45px rgba(190,150,255,.18),
+        0 0 80px rgba(190,150,255,.08);
+}
+
+/* Rahma is the final reveal */
+#finalReveal.active .final-name {
+    animation:
+        finalFadeUp 1.6s ease forwards 5.2s,
+        finalNameShimmer 7s ease-in-out infinite 6.8s;
+}
+
+/* Birthday line arrives last */
+#finalReveal.active .final-birthday {
+    animation:
+        finalFadeUp 1.4s ease forwards 6.5s;
+}
+
+/* Slightly more elegant spacing */
+#finalReveal .final-birthday {
+    letter-spacing: 4px;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    #finalReveal .final-line-2 {
+        font-size: clamp(27px, 8vw, 42px);
+    }
+
+    #finalReveal .final-name {
+        font-size: clamp(38px, 12vw, 62px);
+    }
+
+    #finalReveal .final-birthday {
+        letter-spacing: 3px;
+    }
+}
